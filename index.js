@@ -2,11 +2,11 @@
 
 import axios from 'axios';
 import { Octokit } from 'octokit';
-import marked from 'marked';
+import { marked, setOptions } from 'marked';
 import TerminalRenderer from 'marked-terminal';
 
 // Configure marked to use terminal renderer
-marked.setOptions({
+setOptions({
   renderer: new TerminalRenderer(),
 });
 

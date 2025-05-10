@@ -1,6 +1,7 @@
 {
   "name": "desckribe",
   "version": "1.0.0",
+  "type": "module",
   "description": "Lightweight CLI tool npm package describer",
   "main": "index.js",
   "scripts": {
