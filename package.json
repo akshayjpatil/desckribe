@@ -1,0 +1,32 @@
+{
+  "name": "desckribe",
+  "version": "1.0.0",
+  "description": "Lightweight CLI tool npm package describer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akshayjpatil/desckribe.git"
+  },
+  "keywords": [
+    "npm",
+    "cli",
+    "readme",
+    "desckribe",
+    "tool"
+  ],
+  "author": "akshayjpatil",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akshayjpatil/desckribe/issues"
+  },
+  "homepage": "https://github.com/akshayjpatil/desckribe#readme",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "marked": "^15.0.11",
+    "marked-terminal": "^7.3.0",
+    "octokit": "^4.1.3"
+  }
+}
