@@ -26,6 +26,12 @@ No need to install and can run as one time use:
 npx desckribe <package-name>
 ```
 
+# Features
+
+| Command     | Default | Description                         |
+| ----------- | ------- | ----------------------------------- |
+| `--release` | false   | Will fetch the latest release notes |
+
 # Contributing
 
 Still a TODO as this is a fresh new projects. Ideas are welcome
