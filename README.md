@@ -1,4 +1,4 @@
-# Desckribe
+# Desckribe [![NPM version](https://img.shields.io/npm/v/desckribe.svg?style=flat)](https://npmjs.com/package/desckribe) [![NPM downloads](https://img.shields.io/npm/dm/desckribe.svg?style=flat)](https://npmjs.com/package/desckribe)
 
 Lightweight CLI tool to instantly preview README or migration guide for any npm package
 
