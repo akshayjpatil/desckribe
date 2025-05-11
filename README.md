@@ -38,7 +38,12 @@ npx desckribe <package-name>
 
 # Contributing
 
-Still a TODO as this is a fresh new projects. Ideas are welcome
+Exploring the below features. Suggestions and MRs are welcome to either implement the below ideas or any new suggesstions or idea. Report in issues section.
+
+Features coming soon in future:
+
+- Local repo readability and update suggesstions
+- OpenAI Assistance Code Inspector integration
 
 # License
 
