@@ -35,6 +35,7 @@ ${chalk.bold('Options:')}
   ${chalk.green('--migrate <from> <to>')} Generate an AI-powered migration guide between two versions
   ${chalk.green('--clear-key')}           Delete the saved OpenAI API key from local config
   ${chalk.green('--help, -h')}            Show this help menu
+  ${chalk.green('--version, -v')}            Show the version installed
 ${chalk.bold('Examples:')}
   ${chalk.gray('# Preview README')}
   npx desckribe react

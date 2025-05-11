@@ -1,4 +1,4 @@
-import { NO_REPO_FOUND } from './constants';
+import { NO_REPO_FOUND } from './constants.js';
 
 export class GitNotFoundError extends Error {
   constructor(message, readme) {
