@@ -1,0 +1,1 @@
+export const NO_REPO_FOUND = 'NO_REPO_FOUND'
