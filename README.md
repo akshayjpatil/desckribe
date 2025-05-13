@@ -1,8 +1,10 @@
 # Desckribe [![NPM version](https://img.shields.io/npm/v/desckribe.svg?style=flat)](https://npmjs.com/package/desckribe) [![NPM downloads](https://img.shields.io/npm/dm/desckribe.svg?style=flat)](https://npmjs.com/package/desckribe)
 
-Lightweight CLI tool to instantly preview README or migration guide for any npm package
+Lightweight AI driven CLI tool to help you in understanding and upgrading NPM packages.
 
 ## Getting started
+
+This is AI powered which is optional. You can use an OPENAI_API_KEY of your own to power this CLI tool. Visit [here](https://platform.openai.com/) for more about OpenAI API keys. Either you can manually add one to the `~/.desckriberc` or just run this command and it will prompt you to enter an API key and it will automatically save it for you locally. While running it for the first time it will prompt you to choose if you want raw results or AI driven.
 
 ### Option 1: With npm
 
@@ -28,22 +30,17 @@ npx desckribe <package-name>
 
 # Features
 
-| Command                                 | Default | Description                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| --------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--release`                             | false   | Will fetch the latest release notes                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `--migrate <from-version> <to-version>` | -       | Will give instructions on upgrading version on a node package. Note: This is AI powered which is optional. You can use an OPENAI_API_KEY of your own to power this CLI tool. Visit [here](https://platform.openai.com/) for more about OpenAI API keys. Either you can manually add one to the `~/.desckriberc` or just run this command and it will prompt you to enter an API key and it will automatically save it for you locally |
-| `--clear-key`                           | false   | Delete the saved OpenAI API key from local config                                                                                                                                                                                                                                                                                                                                                                                     |
-| `--help` `-h`                           | false   | Will print all commands and instructions notes                                                                                                                                                                                                                                                                                                                                                                                        |
-| `--version` `-v`                        | false   | Will print the installed version                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Command                                 | Default | Description                                                                                                                                                                                                                                 |
+| --------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--migrate <from-version> <to-version>` | -       | If only `from-version` provided it will fetch release notes for that version, if `to-version` is also given then it will fetch the migration guide for the range. If nothing is provided it will fetch release notes for the latest version |
+| `--set-ai-token`                        | false   | Delete the saved OpenAI API key from local config                                                                                                                                                                                           |
+| `--clear-ai-token`                      | false   | Delete the saved OpenAI API key from local config                                                                                                                                                                                           |
+| `--help` `-h`                           | false   | Will print all commands and instructions notes                                                                                                                                                                                              |
+| `--version` `-v`                        | false   | Will print the installed version                                                                                                                                                                                                            |
 
 # Contributing
 
-Exploring the below features. Suggestions and MRs are welcome to either implement the below ideas or any new suggesstions or idea. Report in issues section.
-
-Features coming soon in future:
-
-- Local repo readability and update suggesstions
-- OpenAI Assistance Code Inspector integration
+Check issues section for help wanted on new features and bugs. PRs and other issue reporting are welcomed.
 
 # License
 

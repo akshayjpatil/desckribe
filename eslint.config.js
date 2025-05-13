@@ -22,6 +22,18 @@ export default [
       // Add or override rules here
       'no-console': 'off',
       'no-unused-vars': 'warn',
+      "camelcase": "off",
+      "prettier/prettier": "error",
+      "newline-before-return": "error",
+      "no-constant-binary-expression": "error",
+      "sort-imports": [
+        "error",
+        {
+          "ignoreCase": true,
+          "ignoreMemberSort": false,
+          "ignoreDeclarationSort": true
+        }
+      ],
     },
   },
   prettierConfig,

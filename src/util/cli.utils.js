@@ -1,29 +1,4 @@
-import fs from 'fs-extra';
-import os from 'os';
-import path from 'path';
 import chalk from 'chalk';
-import axios from 'axios';
-import { GitNotFoundError } from './error.js';
-
-const configPath = path.join(os.homedir(), '.desckriberc');
-
-export async function saveApiKeyToConfig(apiKey) {
-  await fs.writeJson(configPath, { OPENAI_API_KEY: apiKey }, { spaces: 2 })
-}
-
-export async function getApiKeyFromConfig() {
-  if (await fs.pathExists(configPath)) {
-    const config = await fs.readJson(configPath);
-    return config.OPENAI_API_KEY
-  }
-  return null
-}
-
-export async function clearApiKeyFromConfig() {
-  if (await fs.pathExists(configPath)) {
-    await fs.remove(configPath)
-  }
-}
 
 export async function getHelperForDesckribe() {
   console.log(`
@@ -50,19 +25,4 @@ ${chalk.bold('Notes:')}
   • It will be securely saved in ~/.desckriberc unless you opt out.
   • Works with most public npm packages backed by GitHub repos.
   `);
-}
-
-export async function getGitRepoOfNpmPkg(pkg) {
-  const res = await axios.get(`https://registry.npmjs.org/${pkg}`);
-  const repoUrl = res.data.repository?.url;
-
-  if (!repoUrl || !repoUrl.includes('github.com'))
-    throw new GitNotFoundError('No GitHub repo found, falling back to npm README.', res.data.readme)
-
-  const match = repoUrl.match(/github\.com[:/](.+?)\/(.+?)(\.git)?$/);
-  if (!match)
-    throw new GitNotFoundError('No GitHub repo found, falling back to npm README.', res.data.readme)
-  const [, owner, repo] = match;
-
-  return { owner, repo }
 }
